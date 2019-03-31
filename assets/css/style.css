@@ -3,7 +3,28 @@ body {
     background-size: 100%;
     font-family: 'WaltographRegular'; 
     color:white;
-    background-color:pink;
+    background-color:rgb(242, 137, 203);
     font-weight: normal; 
     font-style: normal; 
- }
+}
+header{
+    padding: 15px;
+    background-color:rgb(242, 137, 203);
+} 
+
+h1{
+    font-size: 45px;
+    margin: 30px 850px 30px 68px;
+    text-align: center;
+    
+}
+label{
+    font-size: 25px;
+    
+}
+form{
+    -webkit-tap-highlight-color:rgb(242, 137, 203);
+    margin: 0px 890px 0px 100px;
+    padding:25px 20px 25px 25px;
+    background-color:rgb(242, 137, 203);
+}
