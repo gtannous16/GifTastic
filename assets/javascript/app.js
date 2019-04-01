@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var princesses = ["Cinderella","The Little Mermaid","Rapunzel","Belle","Princess Jasmine","Merida","Tiana","Princess Aurora","Pocahontas","Snow White","Fa Mulan","Anastasia","Elsa","Anna"];
+    var princesses = ["Cinderella","The Little Mermaid","Rapunzel","Belle","Princess Jasmine","Merida","Tiana","Princess Aurora","Pocahontas","Snow White","Mulan","Anastasia","Elsa & Anna"];
 
 
 
@@ -22,6 +22,14 @@ $(document).ready(function () {
 
     } 
 
+    $("#SubmitButton").on("click", function(event){
+        event.preventDefault();
+
+        var character =$("#input").val().trim();
+        princesses.push(character);
+        createButton();
+    })
+
     function showGifs() {
         $('#gifs').empty;
         var character = $(this).attr("data-name");
@@ -36,6 +44,6 @@ $(document).ready(function () {
         })
     }
   
-    createButton()
-
+    createButton();
+    
 })
