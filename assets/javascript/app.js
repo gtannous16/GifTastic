@@ -23,7 +23,20 @@ $(document).ready(function () {
 
     } 
 
-
+    function showGifs() {
+        $('#gifs').empty;
+        var character = $(this).attr("data-name");
+        var queryUrl = "https://api.giphy.com/v1/gifs/search?api_key=V8VwAun9NDurZ4LUOyqB11YA67GbA5d7&q=" + character + "&limit=10&offset=0&rating=G&lang=en";
+        
+        $.ajax({
+            url: queryUrl, 
+            method: 'GET'
+        }).then(function(response) {
+            console.log(response);
+    
+        })
+    }
+  
     createButton()
 
 })
