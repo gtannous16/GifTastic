@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var princesses = ["Cinderella","The Little Mermaid","Rapunzel","Belle","Princess Jasmine","Merida","Tiana","Princess Aurora","Pocahontas","Snow White","Fa Mulan","Anastasia"];
+    var princesses = ["Cinderella","The Little Mermaid","Rapunzel","Belle","Princess Jasmine","Merida","Tiana","Princess Aurora","Pocahontas","Snow White","Fa Mulan","Anastasia","Elsa","Anna"];
 
 
 
@@ -18,7 +18,6 @@ $(document).ready(function () {
             princessOption.text(princesses[i]);
             //adding to html
             $("#button").append(princessOption);
-            
         }
 
     } 
