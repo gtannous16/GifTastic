@@ -30,7 +30,7 @@ $(document).ready(function () {
         createButton();
     })
 
-    function showGifs() {
+    $("#button").on("click", function showGifs() {
         $('#gifs').empty;
         var character = $(this).attr("data-name");
         var queryUrl = "https://api.giphy.com/v1/gifs/search?api_key=V8VwAun9NDurZ4LUOyqB11YA67GbA5d7&q=" + character + "&limit=10&offset=0&rating=G&lang=en";
@@ -39,11 +39,20 @@ $(document).ready(function () {
             url: queryUrl, 
             method: 'GET'
         }).then(function(response) {
-            console.log(response);
+            console.log(response.data);
+
+            var results = response.data.image_original_url;
+            var showCharacter = $("<img>");
+
+                showCharacter.attr('src', results);
+                showCharacter.attr("alt", "characterImage");
+
+                $("#gifs").prepend(showCharacter);
+            
     
-        })
-    }
-  
+        });
+    });
+
     createButton();
     
-})
+});
