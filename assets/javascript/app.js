@@ -28,10 +28,12 @@ $(document).ready(function () {
         var character =$("#input").val().trim();
         princesses.push(character);
         createButton();
-    })
+    });
 
-    $("#button").on("click", function showGifs() {
-        $('#gifs').empty;
+    createButton();
+    
+    $(".Character").on("click", function showGifs() {
+        $("#gifs").empty();
         var character = $(this).attr("data-name");
         var queryUrl = "https://api.giphy.com/v1/gifs/search?api_key=V8VwAun9NDurZ4LUOyqB11YA67GbA5d7&q=" + character + "&limit=10&offset=0&rating=G&lang=en";
         
@@ -40,19 +42,25 @@ $(document).ready(function () {
             method: 'GET'
         }).then(function(response) {
             console.log(response.data);
+            var imagesArray = response.data;
+            for (var i =0; i < imagesArray.length; i++) {
 
-            var results = response.data.image_original_url;
+            var results = response.data[i].images.original_still.url;
             var showCharacter = $("<img>");
 
-                showCharacter.attr('src', results);
-                showCharacter.attr("alt", "characterImage");
-
-                $("#gifs").prepend(showCharacter);
-            
-    
+                showCharacter.attr({
+                    'src': results,
+                    'alt': "CharacterImage",
+                    'height' : "200px",
+                    'width' : "200px"
+                });
+            console.log(results);
+            $("#gifs").prepend(showCharacter);
+            };
+     
         });
     });
 
-    createButton();
+   
     
 });
