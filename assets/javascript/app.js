@@ -23,7 +23,7 @@ $(document).ready(function () {
         var char = $(this).attr("data-name");
         var apiKey = "V8VwAun9NDurZ4LUOyqB11YA67GbA5d7";
         var limitOf = 10;
-        var fullUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey + "&q=" + char + "&limit=" + limitOf + "&offset=0&rating=G&rating=PG&lang=en";
+        var fullUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey + "&q=" + char + "&limit=" + limitOf + "&offset=0&rating=G&lang=en";
 
         $.ajax({
             url: fullUrl,
@@ -53,6 +53,21 @@ $(document).ready(function () {
         })
 
     }
+
+
+     $(document).on('click', '.gif', function () {
+
+        var state = $(this).attr('data-state');
+    
+        if (state == 'still') {
+            $(this).attr('src', $(this).data('animate'));
+            $(this).attr('data-state', 'animate');
+            
+        } else {
+            $(this).attr('src', $(this).data('still'));
+            $(this).attr('data-state', 'still');
+        }
+    })
 
         
         $("#submitButton").on("click", function () {
