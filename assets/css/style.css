@@ -45,3 +45,12 @@ audio{
     height:30px;
     float: right;
 }
+button{
+    font-family: 'WaltographRegular'; 
+    color:rgb(242, 137, 203);
+    font-size: 18px;
+    padding: 8px;
+    margin-left:10px;
+    margin-top:20px;
+    border: solid 2px rgb(242, 137, 203);
+}
