@@ -1,0 +1,47 @@
+body { 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color:white;
+    font-family: 'WaltographRegular'; 
+    background-color:rgb(242, 137, 203);
+    font-weight: normal; 
+    font-style: normal; 
+}
+header{
+    padding: 15px;
+    background-color:rgb(242, 137, 203);
+} 
+#container {
+
+    text-align: center;
+    padding: 2px;
+}
+
+#submitButton{
+    color:rgb(242, 137, 203);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+    border: solid 2px rgb(242, 137, 203);
+    margin:1px;
+}
+form{
+    -webkit-tap-highlight-color:rgb(242, 137, 203);
+    margin: 0px 880px 0px 135px;
+    padding:25px 20px 25px 25px;
+    background-color:rgb(242, 137, 203);
+    width: 220px;
+}
+label{
+    font-size: 25px;
+}
+h1 {
+    font-size: 45px;
+    margin: 30px 850px 10px 68px;
+    text-align: center;
+    width: 400px;
+    font-family: 'WaltographRegular'; 
+}
+audio{
+    height:30px;
+    float: right;
+}
