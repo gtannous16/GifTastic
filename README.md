@@ -1,4 +1,4 @@
-Live link: https://github.com/gtannous16/GifTastic
+Live link: https://gtannous16.github.io/GifTastic/
 
 Objective: Having fun with Disney Princess Gifs. 
 
