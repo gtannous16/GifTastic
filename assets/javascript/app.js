@@ -18,11 +18,11 @@ $(document).ready(function () {
 
     }
 
-    function showGifs()∑ {
+    function showGifs() {
         $('#images').empty();
         var char = $(this).attr("data-name");
         var apiKey = "V8VwAun9NDurZ4LUOyqB11YA67GbA5d7";
-        var limitOf = 20;
+        var limitOf = 25;
         var fullUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + apiKey + "&q=" + char + "&limit=" + limitOf + "&offset=0&rating=G&lang=en";
 
         $.ajax({
